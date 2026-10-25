@@ -127,15 +127,15 @@ def main() -> int:
         if old.name not in written:
             old.unlink()
 
-    # index.toml 다시 만들기 (pack.toml, index.toml, 운영 파일 제외)
-    skip_top = {"pack.toml", "index.toml", "mods.txt", "README.md", "sync_report.md", ".gitattributes"}
-    skip_dirs = {".git", ".github", "tools", "launcher"}
+    # index.toml 다시 만들기
+    # 플레이어 게임 폴더로 내려보낼 폴더만 넣는다. (런처·공지·도구 파일은 절대 넣지 않음)
+    client_dirs = {"mods", "config", "resourcepacks", "shaderpacks"}
     entries = []
     for p in sorted(ROOT.rglob("*")):
         if not p.is_file():
             continue
         rel = p.relative_to(ROOT).as_posix()
-        if rel.split("/")[0] in skip_dirs or rel in skip_top:
+        if "/" not in rel or rel.split("/")[0] not in client_dirs:
             continue
         entries.append((rel, sha256(p), rel.endswith(".pw.toml")))
     lines = ['hash-format = "sha256"', ""]

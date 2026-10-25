@@ -7,6 +7,8 @@ on:
       - mods.txt
       - pack.toml
       - config/**
+      - resourcepacks/**
+      - shaderpacks/**
   workflow_dispatch:
 
 permissions:
