@@ -1,0 +1,13 @@
+name = "엘사서버"
+author = "빵뿌0"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "3a2c244b15c8fd0aa7fa49bf1b54148841c30a4d4cebf75dfca52ce4c9e0bb96"
+
+[versions]
+fabric = "0.19.5"
+minecraft = "1.21.4"

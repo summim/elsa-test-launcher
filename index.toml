@@ -1,0 +1,5 @@
+hash-format = "sha256"
+
+[[files]]
+file = "config/elsa-version.txt"
+hash = "079161ff09430e078898553f8435d771c7b07bd0b8021e34ec21b32c43fb873d"
