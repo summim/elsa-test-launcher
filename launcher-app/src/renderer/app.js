@@ -302,7 +302,6 @@ async function checkUpdate() {
 // ── 시작 ──────────────────────────────────────────────
 (async function init() {
   state.info = await L.info();
-  $('#statusSub').textContent = state.info.serverHost;
   $('#aboutText').textContent = `버전 ${state.info.version}. 로그인과 게임 실행은 함께 들어 있는 Prism Launcher가 처리해요.`;
   applyState(await L.state());
   if (!state.info.prismFound) handleFail('no_prism');

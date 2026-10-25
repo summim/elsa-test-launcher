@@ -243,7 +243,6 @@ app.whenReady().then(() => {
 
   ipcMain.handle('info', () => ({
     serverName: cfg.serverName,
-    serverHost: cfg.serverHost,
     minecraftVersion: cfg.minecraftVersion,
     version: app.getVersion(),
     prismFound: prismAvailable(),

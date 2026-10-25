@@ -1,7 +1,7 @@
 {
   "name": "sumim-test-launcher",
   "productName": "숨밈 테스트 서버 런처",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "숨밈 테스트 서버 전용 런처",
   "main": "src/main.js",
   "author": "빵뿌0",

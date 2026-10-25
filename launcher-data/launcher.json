@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "url": "https://github.com/summim/elsa-test-launcher/releases/latest",
-  "notes": "내 컴퓨터에서 연 서버도 접속자 수가 보이도록 수정"
+  "notes": "대기 화면에서 서버 주소 숨김"
 }
