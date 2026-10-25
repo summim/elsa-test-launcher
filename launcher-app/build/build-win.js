@@ -109,14 +109,24 @@ function copyDir(src, dst, filter = () => true) {
 
   // 6) 압축
   const zipName = `SumimLauncher-${pkg.version}-win64.zip`;
-  // 한글 파일 이름이 윈도우에서 깨지지 않도록 UTF-8 표시가 붙는 파이썬 zipfile 사용
+  // 윈도우 탐색기 "압축 풀기"가 접근 거부를 내지 않도록:
+  // - 한글 이름용 UTF-8 표시 (파이썬 zipfile이 자동으로 붙임)
+  // - 윈도우 형식 속성(폴더 0x10, 파일 0x20)과 폴더 항목을 직접 기록
   execFileSync('python3', ['-c', `
-import os, zipfile
+import os, time, zipfile
+now = time.localtime()[:6]
 with zipfile.ZipFile(${JSON.stringify(zipName)}, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
     for r, ds, fs in os.walk('SumimLauncher'):
+        ds.sort(); fs.sort()
+        zi = zipfile.ZipInfo(r.replace(os.sep, '/') + '/', date_time=now)
+        zi.create_system = 0; zi.external_attr = 0x10
+        z.writestr(zi, b'')
         for f in fs:
             p = os.path.join(r, f)
-            z.write(p, p)
+            zi = zipfile.ZipInfo(p.replace(os.sep, '/'), date_time=now)
+            zi.create_system = 0; zi.external_attr = 0x20; zi.compress_type = zipfile.ZIP_DEFLATED
+            with open(p, 'rb') as fh:
+                z.writestr(zi, fh.read(), compresslevel=9)
 `], { cwd: out });
   console.log(path.join(out, zipName), (fs.statSync(path.join(out, zipName)).size / 1048576).toFixed(1) + ' MB');
 })().catch((e) => {
