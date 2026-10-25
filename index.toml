@@ -2,4 +2,24 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/elsa-version.txt"
-hash = "079161ff09430e078898553f8435d771c7b07bd0b8021e34ec21b32c43fb873d"
+hash = "1e1bda15a3cae3fc2423d0404ca13933a847d75c5c0a92e609f2112790a910bc"
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "b2f2ef63febe17f277635827ca474e1aeae321e8a82bef78942116f95d00250a"
+metafile = true
+
+[[files]]
+file = "mods/iris.pw.toml"
+hash = "e03fc0b0c151c5c072ac399d27b5c4268a093c41be73f3b1578d050bb49211f3"
+metafile = true
+
+[[files]]
+file = "mods/korean-chat-patch.pw.toml"
+hash = "320528b2d7b6598c40311e49d821d5c787f0433201759075256bf7396192edd6"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "09d2dbee70e91e8859e6f62e4181a80264d6dd24cc686fbedb93dda9f69fdfe6"
+metafile = true

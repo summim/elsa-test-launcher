@@ -1,0 +1,9 @@
+# 모드 동기화 결과
+
+마인크래프트 1.21.4 / Fabric
+
+## ✅ 들어간 모드
+- `fabric-api` Fabric API — 0.119.4+1.21.4
+- `iris` Iris Shaders — 1.8.8+1.21.4-fabric
+- `sodium` Sodium — mc1.21.4-0.6.13-fabric
+- `korean-chat-patch` Korean Chat Patch — mc1.21.3-1.9.6-fabric

@@ -1,0 +1,10 @@
+# 엘사서버 시청자 모드 목록
+# 한 줄에 모드 하나씩, Modrinth 주소의 마지막 이름을 적어요.
+# 예) https://modrinth.com/mod/iris  →  iris
+# 꼭 필요한 모드(예: Iris에 필요한 Sodium)는 자동으로 같이 들어가요.
+# '#' 뒤에 적은 글은 메모라서 무시돼요.
+
+fabric-api          # 대부분의 모드가 쓰는 기본 도구
+iris                # 쉐이더팩 사용
+sodium              # 렉 줄이기 (Iris에 꼭 필요)
+korean-chat-patch   # 한글 채팅
