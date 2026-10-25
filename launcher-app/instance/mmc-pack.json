@@ -1,0 +1,22 @@
+{
+    "components": [
+        {
+            "cachedName": "Minecraft",
+            "important": true,
+            "uid": "net.minecraft",
+            "version": "1.21.4"
+        },
+        {
+            "cachedName": "Intermediary Mappings",
+            "dependencyOnly": true,
+            "uid": "net.fabricmc.intermediary",
+            "version": "1.21.4"
+        },
+        {
+            "cachedName": "Fabric Loader",
+            "uid": "net.fabricmc.fabric-loader",
+            "version": "0.19.5"
+        }
+    ],
+    "formatVersion": 1
+}

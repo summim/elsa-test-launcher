@@ -2,7 +2,16 @@
 
 엘사서버(182.231.191.87) 전용 접속 런처와 자동 업데이트 모드 목록이에요.
 
-## 시청자 설치 방법
+## 숨밈 테스트 서버 런처 받기 (추천)
+
+1. [최신 런처 다운로드](https://github.com/summim/elsa-test-launcher/releases/latest) 페이지에서 `SumimLauncher-…-win64.zip`을 받아요.
+2. 압축을 풀고 `SumimLauncher.exe`를 실행해요. ("PC 보호" 창이 뜨면 **추가 정보** → **실행**)
+3. 왼쪽 아래 **Microsoft 로그인** → Prism 창에서 로그인 → 창 닫기
+4. **게임 시작**을 누르면 모드가 자동으로 맞춰지고 서버로 바로 들어가요.
+
+윈도우 전용이에요. 맥 사용자는 아래 Prism 방법을 쓰세요.
+
+## 시청자 설치 방법 (Prism 런처를 직접 쓰는 경우)
 
 1. [prismlauncher.org](https://prismlauncher.org) 에서 Prism 런처를 받아 설치해요.
 2. 오른쪽 위 **계정** → **계정 관리** → **Microsoft 추가**로 정품 계정에 로그인해요.

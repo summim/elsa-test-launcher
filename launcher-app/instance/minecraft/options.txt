@@ -1,0 +1,2 @@
+version:4189
+lang:ko_kr

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' shot: https://mc-heads.net data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'none'" />
+  <title>숨밈 테스트 서버 런처</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 창 제목줄 -->
+  <header class="titlebar">
+    <div class="titlebar__brand">
+      <img src="assets/icon.png" alt="" width="18" height="18" />
+      <span>숨밈 테스트 서버 런처</span>
+    </div>
+    <div class="titlebar__controls">
+      <button class="winbtn" data-win="min" aria-label="최소화">
+        <svg viewBox="0 0 12 12"><path d="M2 6.5h8" /></svg>
+      </button>
+      <button class="winbtn" data-win="max" aria-label="최대화">
+        <svg viewBox="0 0 12 12" class="ico-max"><rect x="2.5" y="2.5" width="7" height="7" rx="1" /></svg>
+        <svg viewBox="0 0 12 12" class="ico-restore"><path d="M4 2.5h5.5V8M2.5 4h5.5v5.5H2.5z" /></svg>
+      </button>
+      <button class="winbtn winbtn--close" data-win="close" aria-label="닫기">
+        <svg viewBox="0 0 12 12"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" /></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <!-- 왼쪽 메뉴 -->
+    <nav class="rail" aria-label="메뉴">
+      <button class="rail__item is-active" data-page="play">
+        <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" /></svg>
+        <span>플레이</span>
+      </button>
+      <button class="rail__item" data-page="notices">
+        <svg viewBox="0 0 24 24"><path d="M4 9.5v5h3l6 4v-13l-6 4zM16.5 9a4 4 0 0 1 0 6" /></svg>
+        <span>공지</span>
+        <i class="rail__dot" id="noticeDot" hidden></i>
+      </button>
+      <button class="rail__item" data-page="mods">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9" /></svg>
+        <span>모드</span>
+      </button>
+      <button class="rail__item" data-page="shots">
+        <svg viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="13" rx="2" /><circle cx="12" cy="12.5" r="3.5" /><path d="M8.5 6l1.5-2.5h4L15.5 6" /></svg>
+        <span>스크린샷</span>
+      </button>
+      <button class="rail__item" data-page="settings">
+        <svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" /><circle cx="16" cy="7" r="2" /><circle cx="8" cy="17" r="2" /></svg>
+        <span>설정</span>
+      </button>
+
+      <div class="account" id="account">
+        <div class="account__avatar" id="accAvatar"></div>
+        <div class="account__text">
+          <strong id="accName">로그인 필요</strong>
+          <small id="accSub">Microsoft 계정</small>
+        </div>
+        <button class="account__btn" id="accBtn">로그인</button>
+      </div>
+    </nav>
+
+    <main class="stage">
+      <!-- 플레이 -->
+      <section class="page page--play is-active" data-page="play">
+        <div class="hero">
+          <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+          <svg class="shards" viewBox="0 0 800 520" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#cdefff" stop-opacity=".95" />
+                <stop offset="1" stop-color="#3f8fc4" stop-opacity=".25" />
+              </linearGradient>
+              <linearGradient id="gB" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#9fe2ff" stop-opacity=".75" />
+                <stop offset="1" stop-color="#1c4a70" stop-opacity=".15" />
+              </linearGradient>
+              <linearGradient id="gC" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#b6a6ff" stop-opacity=".55" />
+                <stop offset="1" stop-color="#e6f6ff" stop-opacity=".9" />
+              </linearGradient>
+              <linearGradient id="gD" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".85" />
+                <stop offset="1" stop-color="#7cd4f7" stop-opacity=".05" />
+              </linearGradient>
+            </defs>
+            <g class="shards__group">
+              <polygon points="560,40 640,250 520,520 470,300" fill="url(#gB)" />
+              <polygon points="640,250 560,40 700,120" fill="url(#gD)" />
+              <polygon points="640,250 700,120 790,330 700,520 520,520" fill="url(#gA)" />
+              <polygon points="700,120 760,10 820,180 790,330" fill="url(#gC)" />
+              <polygon points="470,300 520,520 380,520" fill="url(#gB)" opacity=".7" />
+              <polygon points="430,180 470,300 400,420 380,300" fill="url(#gD)" opacity=".55" />
+              <polygon points="790,330 860,260 860,520 700,520" fill="url(#gB)" opacity=".8" />
+              <polyline points="560,40 640,250 700,520" class="shards__edge" />
+              <polyline points="700,120 640,250" class="shards__edge" />
+              <polyline points="760,10 790,330" class="shards__edge" />
+            </g>
+            <g class="flakes">
+              <circle cx="360" cy="90" r="1.6" /><circle cx="300" cy="200" r="1.1" /><circle cx="420" cy="60" r="1" />
+              <circle cx="520" cy="160" r="1.3" /><circle cx="250" cy="120" r="0.9" /><circle cx="470" cy="110" r="1.2" />
+            </g>
+          </svg>
+
+          <div class="hero__copy">
+            <h1 class="hero__title">
+              <span class="hero__name">숨밈</span>
+              <span class="hero__sub">테스트 서버</span>
+            </h1>
+            <ul class="chips" id="chips">
+              <li class="chip">마인크래프트 1.21.4</li>
+              <li class="chip">Fabric</li>
+              <li class="chip" id="chipMods">모드 확인 중</li>
+            </ul>
+          </div>
+
+          <button class="notice-peek" id="noticePeek" hidden>
+            <span class="notice-peek__label">최근 공지</span>
+            <strong id="peekTitle"></strong>
+            <time id="peekDate"></time>
+          </button>
+        </div>
+
+        <div class="dock">
+          <div class="status" id="status">
+            <span class="status__dot"></span>
+            <div class="status__text">
+              <strong id="statusMain">서버 확인 중</strong>
+              <small id="statusSub">182.231.191.87</small>
+            </div>
+          </div>
+          <p class="dock__msg" id="dockMsg" aria-live="polite"></p>
+          <button class="play" id="playBtn">
+            <span class="play__label">게임 시작</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 공지 -->
+      <section class="page" data-page="notices">
+        <div class="page__head">
+          <h2>공지</h2>
+          <p>서버 소식과 업데이트 내용이에요.</p>
+        </div>
+        <ol class="notices" id="notices"></ol>
+      </section>
+
+      <!-- 모드 -->
+      <section class="page" data-page="mods">
+        <div class="page__head">
+          <h2>모드</h2>
+          <p id="modsLead">게임을 시작하면 아래 목록에 맞춰 자동으로 설치·업데이트돼요.</p>
+        </div>
+        <div class="table" id="mods" role="table" aria-label="모드 목록"></div>
+      </section>
+
+      <!-- 스크린샷 -->
+      <section class="page" data-page="shots">
+        <div class="page__head page__head--row">
+          <div>
+            <h2>스크린샷</h2>
+            <p>게임에서 F2를 누르면 여기에 모여요.</p>
+          </div>
+          <button class="ghost" data-folder="screenshots">폴더 열기</button>
+        </div>
+        <div class="shots" id="shots"></div>
+      </section>
+
+      <!-- 설정 -->
+      <section class="page" data-page="settings">
+        <div class="page__head">
+          <h2>설정</h2>
+          <p>바꾼 내용은 바로 저장돼요. 다음 게임 시작부터 적용돼요.</p>
+        </div>
+
+        <div class="settings">
+          <div class="setting">
+            <div class="setting__text">
+              <strong>게임에 쓸 메모리</strong>
+              <small>렉이 심하면 올려 보세요. 컴퓨터 메모리의 절반 이하를 권장해요.</small>
+            </div>
+            <div class="setting__control setting__control--range">
+              <input type="range" id="mem" min="2048" max="16384" step="512" aria-label="메모리" />
+              <output id="memOut">4 GB</output>
+            </div>
+          </div>
+
+          <div class="setting">
+            <div class="setting__text">
+              <strong>게임 시작 후 런처 최소화</strong>
+              <small>게임을 끄면 런처가 다시 나타나요.</small>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="minimize" />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="setting">
+            <div class="setting__text">
+              <strong>폴더 열기</strong>
+              <small>쉐이더팩은 shaderpacks 폴더에 넣으면 돼요.</small>
+            </div>
+            <div class="setting__control setting__control--buttons">
+              <button class="ghost" data-folder="game">게임 폴더</button>
+              <button class="ghost" data-folder="shaders">쉐이더팩</button>
+              <button class="ghost" data-folder="resourcepacks">리소스팩</button>
+            </div>
+          </div>
+
+          <div class="setting">
+            <div class="setting__text">
+              <strong>Microsoft 계정</strong>
+              <small id="setAccText">계정을 바꾸거나 다시 로그인할 때 Prism 창이 열려요.</small>
+            </div>
+            <button class="ghost" id="setAccBtn">계정 관리</button>
+          </div>
+
+          <div class="setting setting--about">
+            <div class="setting__text">
+              <strong>런처 정보</strong>
+              <small id="aboutText"></small>
+            </div>
+            <button class="ghost" id="repoBtn">GitHub 열기</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="banner" id="updateBanner" hidden>
+    <span id="updateText"></span>
+    <button class="ghost ghost--light" id="updateBtn">받으러 가기</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
