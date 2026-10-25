@@ -153,10 +153,16 @@ async function refreshServer() {
   box.classList.toggle('is-offline', !s.online);
   if (s.online) {
     $('#statusMain').textContent = `접속자 ${s.players} / ${s.max}명`;
-    $('#statusSub').textContent = `온라인, 응답 ${s.latency}ms`;
+    $('#statusSub').textContent = s.via === 'local' ? `이 컴퓨터에서 열린 서버, 응답 ${s.latency}ms` : `온라인, 응답 ${s.latency}ms`;
   } else {
-    $('#statusMain').textContent = '서버 꺼짐';
-    $('#statusSub').textContent = '서버가 켜지면 자동으로 표시돼요';
+    const why = {
+      timeout: '응답 없음. 서버가 꺼졌거나 포트가 막혀 있어요',
+      ECONNREFUSED: '연결 거부. 서버가 꺼졌거나 포트 번호가 달라요',
+      ENETUNREACH: '인터넷 연결을 확인해 주세요',
+      EHOSTUNREACH: '서버 컴퓨터에 닿을 수 없어요',
+    }[s.error];
+    $('#statusMain').textContent = '서버에 연결할 수 없음';
+    $('#statusSub').textContent = why || `연결 실패 (${s.error || '알 수 없음'})`;
   }
 }
 

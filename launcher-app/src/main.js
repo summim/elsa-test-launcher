@@ -26,6 +26,7 @@ protocol.registerSchemesAsPrivileged([
 let win = null;
 let prismProc = null;
 let prismMode = null; // 'game' | 'account'
+let joinHost = cfg.serverHost; // 게임 시작 때 접속할 주소
 
 // ── 런처 설정 (최소화 등) ────────────────────────────────────────────
 function readLauncherSettings() {
@@ -249,7 +250,22 @@ app.whenReady().then(() => {
     repoPage: cfg.repoPage,
   }));
   ipcMain.handle('state', () => ({ running: !!prismProc, mode: prismMode, account: readAccount() }));
-  ipcMain.handle('ping', () => ping(cfg.serverHost, cfg.serverPort));
+  // 서버 상태 확인. 바깥 주소(공인 IP)로 안 되면 같은 컴퓨터(127.0.0.1)도 확인해요.
+  // 서버를 내 컴퓨터에서 열면, 공유기에 따라 내 공인 IP로는 접속이 안 될 수 있어요.
+  ipcMain.handle('ping', async () => {
+    const pub = await ping(cfg.serverHost, cfg.serverPort);
+    if (pub.online) {
+      joinHost = cfg.serverHost;
+      return { ...pub, via: 'public' };
+    }
+    const local = await ping('127.0.0.1', cfg.serverPort, 1500);
+    if (local.online) {
+      joinHost = '127.0.0.1';
+      return { ...local, via: 'local', publicError: pub.error };
+    }
+    joinHost = cfg.serverHost;
+    return { ...pub, via: 'public' };
+  });
   ipcMain.handle('notices', () => loadNotices());
   ipcMain.handle('mods', () => loadMods());
   ipcMain.handle('launcherUpdate', () => checkLauncherUpdate());
@@ -257,7 +273,7 @@ app.whenReady().then(() => {
 
   ipcMain.handle('play', () => {
     if (!readAccount()) return { ok: false, reason: 'no_account' };
-    const r = runPrism(['--launch', cfg.instanceId, '--server', `${cfg.serverHost}:${cfg.serverPort}`], 'game');
+    const r = runPrism(['--launch', cfg.instanceId, '--server', `${joinHost}:${cfg.serverPort}`], 'game');
     if (r.ok && readLauncherSettings().minimizeOnLaunch) setTimeout(() => win && win.minimize(), 1200);
     return r;
   });
