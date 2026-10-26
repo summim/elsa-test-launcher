@@ -5,6 +5,11 @@ file = "config/elsa-version.txt"
 hash = "1e1bda15a3cae3fc2423d0404ca13933a847d75c5c0a92e609f2112790a910bc"
 
 [[files]]
+file = "mods/custom-holdem.pw.toml"
+hash = "cbfecac7a23b529cce599d08ab67605764fc58e57ac33d8c12056ccfc4686415"
+metafile = true
+
+[[files]]
 file = "mods/fabric-api.pw.toml"
 hash = "b2f2ef63febe17f277635827ca474e1aeae321e8a82bef78942116f95d00250a"
 metafile = true

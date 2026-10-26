@@ -9,6 +9,7 @@ on:
       - config/**
       - resourcepacks/**
       - shaderpacks/**
+      - custom-mods/**
   workflow_dispatch:
 
 permissions:

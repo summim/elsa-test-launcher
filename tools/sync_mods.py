@@ -3,6 +3,7 @@
 
 - mods.txt: 한 줄에 Modrinth 주소 이름(slug) 하나. '#' 뒤는 메모.
 - 각 모드는 pack.toml의 마인크래프트 버전 + Fabric 용 최신 release(없으면 beta) 버전을 고른다.
+- custom-mods/*.jar: Modrinth 에 없는 직접 만든 Fabric 모드. GitHub 주소로 내려받게 등록한다.
 - 결과는 sync_report.md 에 적는다. 하나라도 실패하면 종료 코드 1.
 
 필요한 것: 파이썬 3.9 이상, 인터넷(api.modrinth.com). 추가 설치 없음.
@@ -15,10 +16,12 @@ import re
 import sys
 import urllib.parse
 import urllib.request
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://api.modrinth.com/v2"
+REPO = "summim/elsa-test-launcher"
 UA = {"User-Agent": "summim/elsa-test-launcher (packwiz sync)"}
 
 
@@ -64,6 +67,7 @@ def pick_version(slug: str, mc: str):
 
 def main() -> int:
     mc, _ = read_pack_versions()
+    mc_version = mc
     mods_dir = ROOT / "mods"
     mods_dir.mkdir(exist_ok=True)
 
@@ -121,6 +125,44 @@ def main() -> int:
         for dep in v.get("dependencies", []):
             if dep.get("dependency_type") == "required" and dep.get("project_id") and dep["project_id"] not in done_ids:
                 wanted.append(dep["project_id"])
+
+    # 직접 만든 모드: custom-mods 폴더의 jar 를 GitHub 주소로 내려받게 등록한다.
+    # (Modrinth 에 없는 모드. jar 를 넣거나 빼기만 하면 된다)
+    for jar in sorted((ROOT / "custom-mods").glob("*.jar")):
+        try:
+            with zipfile.ZipFile(jar) as z:
+                meta = json.loads(z.read("fabric.mod.json").decode("utf-8"))
+        except Exception as e:  # noqa: BLE001
+            failed.append(f"`{jar.name}`: Fabric 모드 정보(fabric.mod.json)를 읽지 못했어요 ({e})")
+            continue
+        mod_id = re.sub(r"[^a-z0-9_-]", "-", str(meta.get("id", jar.stem)).lower())
+        mc = (meta.get("depends") or {}).get("minecraft", "")
+        name = f"custom-{mod_id}.pw.toml"
+        data = jar.read_bytes()
+        url = f"https://raw.githubusercontent.com/{REPO}/main/custom-mods/{urllib.parse.quote(jar.name)}"
+        side = "client" if meta.get("environment") == "client" else "both"
+        (mods_dir / name).write_text(
+            "\n".join([
+                f"name = {toml_str(meta.get('name') or mod_id)}",
+                f"filename = {toml_str(jar.name)}",
+                f'side = "{side}"',
+                "",
+                "[download]",
+                f"url = {toml_str(url)}",
+                'hash-format = "sha512"',
+                f"hash = {toml_str(hashlib.sha512(data).hexdigest())}",
+                "",
+            ]),
+            encoding="utf-8",
+            newline="\n",
+        )
+        written.add(name)
+        ok.append(f"`{jar.name}` {meta.get('name') or mod_id} — {meta.get('version', '?')} (직접 만든 모드)")
+        deps = meta.get("depends") or {}
+        if "fabric-api" in deps and "fabric-api" not in read_mod_list():
+            warn.append(f"`{jar.name}`: Fabric API가 필요해요. mods.txt에 fabric-api 를 넣어 주세요")
+        if mc and not str(mc).lstrip("~>=^ ").startswith(mc_version.rsplit(".", 1)[0]):
+            warn.append(f"`{jar.name}`: 이 모드는 마인크래프트 {mc} 용이에요 (팩은 {mc_version})")
 
     # mods.txt에서 지운 모드는 목록에서도 지운다.
     for old in mods_dir.glob("*.pw.toml"):
