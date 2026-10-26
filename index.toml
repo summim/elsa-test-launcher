@@ -6,7 +6,7 @@ hash = "1e1bda15a3cae3fc2423d0404ca13933a847d75c5c0a92e609f2112790a910bc"
 
 [[files]]
 file = "mods/custom-airhockey.pw.toml"
-hash = "890e6668e1a26a85d60678587655fe2c99274b7903e3b021449feb2a743a57fc"
+hash = "d8d310afabed27e0341186628577417496e04350e723944c523ba88b335950fd"
 metafile = true
 
 [[files]]
