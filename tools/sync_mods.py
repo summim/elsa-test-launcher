@@ -19,6 +19,9 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import auto_notice  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 API = "https://api.modrinth.com/v2"
 REPO = "summim/elsa-test-launcher"
@@ -70,6 +73,7 @@ def main() -> int:
     mc_version = mc
     mods_dir = ROOT / "mods"
     mods_dir.mkdir(exist_ok=True)
+    before = auto_notice.snapshot()
 
     report = [f"# 모드 동기화 결과\n\n마인크래프트 {mc} / Fabric\n"]
     ok, failed, warn = [], [], []
@@ -199,6 +203,9 @@ def main() -> int:
         report.append("## ⚠️ 주의\n" + "\n".join(f"- {x}" for x in warn) + "\n")
     if failed:
         report.append("## ❌ 실패\n" + "\n".join(f"- {x}" for x in failed) + "\n")
+    posted = auto_notice.announce(before, auto_notice.snapshot())
+    if posted:
+        report.append("## 📢 런처 공지\n" + "\n".join(f"- {t}" for t in posted) + "\n")
     (ROOT / "sync_report.md").write_text("\n".join(report), encoding="utf-8", newline="\n")
     print("\n".join(report))
     return 1 if failed else 0
