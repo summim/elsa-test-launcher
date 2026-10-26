@@ -5,6 +5,11 @@ file = "config/elsa-version.txt"
 hash = "1e1bda15a3cae3fc2423d0404ca13933a847d75c5c0a92e609f2112790a910bc"
 
 [[files]]
+file = "mods/custom-airhockey.pw.toml"
+hash = "d6013be809276f41bf5fcdcd40cc7fc4e85e352c3ab9898733f61b4cd9523cfb"
+metafile = true
+
+[[files]]
 file = "mods/custom-holdem.pw.toml"
 hash = "cbfecac7a23b529cce599d08ab67605764fc58e57ac33d8c12056ccfc4686415"
 metafile = true

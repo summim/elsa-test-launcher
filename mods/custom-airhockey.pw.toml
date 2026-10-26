@@ -1,0 +1,8 @@
+name = "AirHockey"
+filename = "AirHockey-1.0.0-mc1.21.4.jar"
+side = "client"
+
+[download]
+url = "https://raw.githubusercontent.com/summim/elsa-test-launcher/main/custom-mods/AirHockey-1.0.0-mc1.21.4.jar"
+hash-format = "sha512"
+hash = "07287f6a55d36ea90148f4816ccd55741f40d3179b7e713e9a3595743285cb5e0375ab82b1c0b0a1a4f88d05be8403f2739ee40cd4fbe44e692ea9eb719b7f59"
