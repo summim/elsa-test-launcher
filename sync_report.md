@@ -9,3 +9,6 @@
 - `korean-chat-patch` Korean Chat Patch — mc1.21.3-1.9.6-fabric
 - `AirHockey-1.0.0-mc1.21.4.jar` AirHockey — 1.0.0 (직접 만든 모드)
 - `Holdem-1.0.0-mc1.21.4.jar` Holdem — 1.0.0 (직접 만든 모드)
+
+## 📢 런처 공지
+- 모드 업데이트: AirHockey
