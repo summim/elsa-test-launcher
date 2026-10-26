@@ -23,3 +23,7 @@ metafile = true
 file = "mods/sodium.pw.toml"
 hash = "09d2dbee70e91e8859e6f62e4181a80264d6dd24cc686fbedb93dda9f69fdfe6"
 metafile = true
+
+[[files]]
+file = "resourcepacks/icehunt_models.zip"
+hash = "2a2bdedbe472f31514974f481bc1ca275c502a2bcee054edc3336a5e2619fa08"
