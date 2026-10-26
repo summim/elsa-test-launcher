@@ -5,4 +5,4 @@ side = "client"
 [download]
 url = "https://raw.githubusercontent.com/summim/elsa-test-launcher/main/custom-mods/AirHockey-1.0.0-mc1.21.4.jar"
 hash-format = "sha512"
-hash = "07287f6a55d36ea90148f4816ccd55741f40d3179b7e713e9a3595743285cb5e0375ab82b1c0b0a1a4f88d05be8403f2739ee40cd4fbe44e692ea9eb719b7f59"
+hash = "510d6b36a23c6db1b5cf4949132d466d9fe2ef9a426605e5c6fec84c5fcfcb4537162bd4e458b977955d0b2b5c77099bea75e01b8b518dffadd8729af5b2ea13"
