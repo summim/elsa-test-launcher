@@ -15,3 +15,6 @@ entity-model-features        # 위 리소스팩을 돌리는 모드 (EMF)
 entitytexturefeatures        # EMF에 꼭 필요한 모드 (ETF)
 resource-pack-overrides      # 위 리소스팩을 항상 켜 두는 모드
 hold-my-items                # 1인칭: 손이 보이고 검을 크게 휘두르는 모션 (HMI)
+
+# ── 편의 ──
+commandkeys                  # 키바인드: 아무 키에 명령어(/skill1 등) 연결
