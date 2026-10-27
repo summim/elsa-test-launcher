@@ -13,6 +13,3 @@
 - `resource-pack-overrides` Resource Pack Overrides — v21.4.0-1.21.4-Fabric
 - `AirHockey-1.0.2-mc1.21.4.jar` AirHockey — 1.0.2 (직접 만든 모드)
 - `Holdem-1.0.0-mc1.21.4.jar` Holdem — 1.0.0 (직접 만든 모드)
-
-## 📢 런처 공지
-- 모드·리소스팩·게임 설정 파일 업데이트
