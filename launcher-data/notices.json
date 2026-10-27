@@ -1,6 +1,12 @@
 [
   {
     "date": "2026-10-27",
+    "title": "얼음 사냥터 스킬을 숫자키로 쓸 수 있어요",
+    "tag": "얼음 사냥터",
+    "body": "핫바 1~4번 칸에 스킬 아이콘이 생겼어요. 숫자키 1~4를 누르면 스킬이 바로 나가요.\n무기는 5번 칸이고, 스킬을 쓰면 손이 자동으로 무기로 돌아와요.\n아이콘에 회색 덮개가 있으면 쿨타임이에요.\n\n예전 입력(F키, 우클릭, 쉬프트+우클릭, 쉬프트 2번)도 그대로 쓸 수 있어요.\n1~5번 칸은 직업 전용이라 다른 아이템은 6~9번 칸에 넣어 주세요."
+  },
+  {
+    "date": "2026-10-27",
     "title": "모드·리소스팩·게임 설정 파일 업데이트",
     "tag": "자동 업데이트",
     "body": "추가: [ETF] Entity Texture Features, [EMF] Entity Model Features, Fresh Animations: Player Extension(리소스팩), Resource Pack Overrides, resourcepackoverrides.json(게임 설정 파일), Text Placeholder API, Cloth Config API, Mod Menu, Hold My Items\n업데이트: AirHockey\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
