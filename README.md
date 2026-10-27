@@ -30,6 +30,7 @@
 
 1. 이 저장소에서 `mods.txt`를 열고 오른쪽 위 연필 아이콘(✏️)을 눌러요.
 2. 모드를 넣으려면 Modrinth 주소의 마지막 이름을 한 줄에 하나씩 적어요. (예: `modrinth.com/mod/iris` → `iris`)
+   Modrinth **리소스팩**도 같은 방법으로 넣을 수 있어요. 리소스팩은 `config/resourcepackoverrides.json`에 `"file/이름.zip": {"required": true}`를 추가해야 자동으로 켜져요.
    빼려면 그 줄을 지워요.
 3. 오른쪽 위 **Commit changes** → 다시 **Commit changes**를 눌러요.
 4. 1~2분 기다린 뒤 `sync_report.md`를 열어 결과를 확인해요. ✅면 성공, ❌면 그 모드는 1.21.4 Fabric 버전이 없는 거예요.

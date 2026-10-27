@@ -29,9 +29,10 @@ def _toml_value(text: str, key: str) -> str | None:
 
 def snapshot() -> dict:
     mods = {}
-    for p in (ROOT / "mods").glob("*.pw.toml"):
+    for p in list((ROOT / "mods").glob("*.pw.toml")) + list((ROOT / "resourcepacks").glob("*.pw.toml")):
         t = p.read_text(encoding="utf-8")
-        mods[p.name] = {
+        mods[p.parent.name + "/" + p.name] = {
+            "kind": "리소스팩" if p.parent.name == "resourcepacks" else "모드",
             "name": _toml_value(t, "name") or p.stem,
             "filename": _toml_value(t, "filename") or "",
             "hash": _toml_value(t, "hash") or "",
@@ -50,13 +51,14 @@ def _changes(before: dict, after: dict) -> list[tuple[str, str, str]]:
     """(분류, 동작, 이름) 목록"""
     out = []
     bm, am = before["mods"], after["mods"]
+    kind = lambda m: m.get("kind", "모드")  # noqa: E731
     for k in am.keys() - bm.keys():
-        out.append(("모드", "추가", am[k]["name"]))
+        out.append((kind(am[k]), "추가", am[k]["name"]))
     for k in bm.keys() - am.keys():
-        out.append(("모드", "삭제", bm[k]["name"]))
+        out.append((kind(bm[k]), "삭제", bm[k]["name"]))
     for k in am.keys() & bm.keys():
         if (am[k]["filename"], am[k]["hash"]) != (bm[k]["filename"], bm[k]["hash"]):
-            out.append(("모드", "업데이트", am[k]["name"]))
+            out.append((kind(am[k]), "업데이트", am[k]["name"]))
     bf, af = before["files"], after["files"]
     for f in sorted(af.keys() | bf.keys()):
         if f.endswith("elsa-version.txt"):

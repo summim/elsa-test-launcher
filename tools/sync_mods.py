@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """mods.txt에 적힌 모드 목록으로 packwiz 파일(mods/*.pw.toml, index.toml, pack.toml)을 다시 만든다.
 
-- mods.txt: 한 줄에 Modrinth 주소 이름(slug) 하나. '#' 뒤는 메모.
+- mods.txt: 한 줄에 Modrinth 주소 이름(slug) 하나. '#' 뒤는 메모. 모드와 리소스팩 둘 다 돼요.
 - 각 모드는 pack.toml의 마인크래프트 버전 + Fabric 용 최신 release(없으면 beta) 버전을 고른다.
 - custom-mods/*.jar: Modrinth 에 없는 직접 만든 Fabric 모드. GitHub 주소로 내려받게 등록한다.
 - 결과는 sync_report.md 에 적는다. 하나라도 실패하면 종료 코드 1.
@@ -58,8 +58,8 @@ def read_mod_list() -> list[str]:
     return slugs
 
 
-def pick_version(slug: str, mc: str):
-    q = urllib.parse.urlencode({"loaders": '["fabric"]', "game_versions": json.dumps([mc])})
+def pick_version(slug: str, mc: str, loader: str = "fabric"):
+    q = urllib.parse.urlencode({"loaders": json.dumps([loader]), "game_versions": json.dumps([mc])})
     versions = get(f"{API}/project/{urllib.parse.quote(slug)}/version?{q}")
     for kind in ("release", "beta"):
         for v in versions:
@@ -73,6 +73,8 @@ def main() -> int:
     mc_version = mc
     mods_dir = ROOT / "mods"
     mods_dir.mkdir(exist_ok=True)
+    packs_dir = ROOT / "resourcepacks"
+    packs_dir.mkdir(exist_ok=True)
     before = auto_notice.snapshot()
 
     report = [f"# 모드 동기화 결과\n\n마인크래프트 {mc} / Fabric\n"]
@@ -91,9 +93,11 @@ def main() -> int:
             continue
         done_ids.add(proj["id"])
 
-        v = pick_version(proj["slug"], mc)
+        is_pack = proj.get("project_type") == "resourcepack"
+        v = pick_version(proj["slug"], mc, "minecraft" if is_pack else "fabric")
         if v is None:
-            failed.append(f"`{slug}` ({proj['title']}): 마인크래프트 {mc} Fabric 버전이 없어요")
+            what = "리소스팩" if is_pack else "Fabric"
+            failed.append(f"`{slug}` ({proj['title']}): 마인크래프트 {mc} {what} 버전이 없어요")
             continue
         f = next((x for x in v["files"] if x["primary"]), v["files"][0])
 
@@ -102,10 +106,14 @@ def main() -> int:
 
         side = "client" if proj.get("server_side") == "unsupported" else "both"
         name = f"{proj['slug']}.pw.toml"
-        (mods_dir / name).write_text(
+        # 리소스팩은 resourcepacks 폴더에, 버전이 바뀌어도 같은 이름(slug.zip)으로 저장
+        # → config/resourcepackoverrides.json 에서 이 이름으로 항상 켜 둘 수 있어요
+        out_dir = packs_dir if is_pack else mods_dir
+        disk_name = f"{proj['slug']}.zip" if is_pack else f["filename"]
+        (out_dir / name).write_text(
             "\n".join([
                 f"name = {toml_str(proj['title'])}",
-                f"filename = {toml_str(f['filename'])}",
+                f"filename = {toml_str(disk_name)}",
                 f'side = "{side}"',
                 "",
                 "[download]",
@@ -122,8 +130,8 @@ def main() -> int:
             encoding="utf-8",
             newline="\n",
         )
-        written.add(name)
-        ok.append(f"`{proj['slug']}` {proj['title']} — {v['version_number']}")
+        written.add(("pack/" if is_pack else "") + name)
+        ok.append(f"`{proj['slug']}` {proj['title']} — {v['version_number']}" + (" (리소스팩)" if is_pack else ""))
 
         # 꼭 필요한 다른 모드(required)는 자동으로 같이 넣는다.
         for dep in v.get("dependencies", []):
@@ -171,6 +179,9 @@ def main() -> int:
     # mods.txt에서 지운 모드는 목록에서도 지운다.
     for old in mods_dir.glob("*.pw.toml"):
         if old.name not in written:
+            old.unlink()
+    for old in packs_dir.glob("*.pw.toml"):
+        if "pack/" + old.name not in written:
             old.unlink()
 
     # index.toml 다시 만들기

@@ -1,0 +1,8 @@
+{
+  "schema_version": "2",
+  "pack_overrides": {
+    "file/fa-player-extension.zip": {
+      "required": true
+    }
+  }
+}

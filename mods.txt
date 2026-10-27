@@ -8,3 +8,9 @@ fabric-api          # 대부분의 모드가 쓰는 기본 도구
 iris                # 쉐이더팩 사용
 sodium              # 렉 줄이기 (Iris에 꼭 필요)
 korean-chat-patch   # 한글 채팅
+
+# ── 플레이어 모션 (걷기·달리기·공격·점프) ──
+fa-player-extension          # 리소스팩: Fresh Animations 플레이어 모션
+entity-model-features        # 위 리소스팩을 돌리는 모드 (EMF)
+entitytexturefeatures        # EMF에 꼭 필요한 모드 (ETF)
+resource-pack-overrides      # 위 리소스팩을 항상 켜 두는 모드

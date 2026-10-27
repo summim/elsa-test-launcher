@@ -5,6 +5,10 @@ file = "config/elsa-version.txt"
 hash = "1e1bda15a3cae3fc2423d0404ca13933a847d75c5c0a92e609f2112790a910bc"
 
 [[files]]
+file = "config/resourcepackoverrides.json"
+hash = "0d6729f251738ec3399587d2a4b1346384262b023903c576eb66c74a9da55372"
+
+[[files]]
 file = "mods/custom-airhockey.pw.toml"
 hash = "8a65c8eac40fa19d8dacd93fa775fa78db102ed6aa165cafa154462ad8909453"
 metafile = true
@@ -12,6 +16,16 @@ metafile = true
 [[files]]
 file = "mods/custom-holdem.pw.toml"
 hash = "cbfecac7a23b529cce599d08ab67605764fc58e57ac33d8c12056ccfc4686415"
+metafile = true
+
+[[files]]
+file = "mods/entity-model-features.pw.toml"
+hash = "9105f6847c2231d388b9e2f86426aafe3969c5e5a4340763306e55eb6bf3d66c"
+metafile = true
+
+[[files]]
+file = "mods/entitytexturefeatures.pw.toml"
+hash = "cf07e4779775f938919762fed1ff89121fc84fa1086b4af05bb525e26daaca29"
 metafile = true
 
 [[files]]
@@ -30,8 +44,18 @@ hash = "320528b2d7b6598c40311e49d821d5c787f0433201759075256bf7396192edd6"
 metafile = true
 
 [[files]]
+file = "mods/resource-pack-overrides.pw.toml"
+hash = "0024824f658e22089b46872177718a818c4118d98bed6f7a72003e0746b389f7"
+metafile = true
+
+[[files]]
 file = "mods/sodium.pw.toml"
 hash = "09d2dbee70e91e8859e6f62e4181a80264d6dd24cc686fbedb93dda9f69fdfe6"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fa-player-extension.pw.toml"
+hash = "05765d86790222ee5b20acc69c13dc1241726c574618ac9f4c9a63022ee60547"
 metafile = true
 
 [[files]]

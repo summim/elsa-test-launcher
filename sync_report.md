@@ -7,8 +7,12 @@
 - `iris` Iris Shaders — 1.8.8+1.21.4-fabric
 - `sodium` Sodium — mc1.21.4-0.6.13-fabric
 - `korean-chat-patch` Korean Chat Patch — mc1.21.3-1.9.6-fabric
+- `fa-player-extension` Fresh Animations: Player Extension — 1.1.0 (리소스팩)
+- `entity-model-features` [EMF] Entity Model Features — 3.3.12-fabric-1.21.4
+- `entitytexturefeatures` [ETF] Entity Texture Features — 7.2.6-fabric-1.21.4
+- `resource-pack-overrides` Resource Pack Overrides — v21.4.0-1.21.4-Fabric
 - `AirHockey-1.0.2-mc1.21.4.jar` AirHockey — 1.0.2 (직접 만든 모드)
 - `Holdem-1.0.0-mc1.21.4.jar` Holdem — 1.0.0 (직접 만든 모드)
 
 ## 📢 런처 공지
-- 모드 업데이트: AirHockey
+- 모드·리소스팩·게임 설정 파일 업데이트

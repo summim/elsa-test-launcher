@@ -1,18 +1,49 @@
 [
   {
     "date": "2026-10-27",
-    "title": "모드 업데이트: AirHockey",
+    "title": "플레이어 걷기·달리기·공격 모션이 바뀌었어요",
+    "tag": "모션",
+    "body": "캐릭터가 걷고, 달리고, 검을 휘두르고, 점프할 때 움직임이 더 자연스러워져요.\n런처로 게임을 시작하면 자동으로 설치되고 켜져요. 따로 설정할 건 없어요.\n\n다른 사람의 모션은 그 사람도 숨밈 런처로 들어와야 똑같이 보여요."
+  },
+  {
+    "date": "2026-10-27",
+    "title": "모드·리소스팩·게임 설정 파일 업데이트",
     "tag": "자동 업데이트",
-    "body": "업데이트: AirHockey\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
+    "body": "추가: [ETF] Entity Texture Features, [EMF] Entity Model Features, Fresh Animations: Player Extension(리소스팩), Resource Pack Overrides, resourcepackoverrides.json(게임 설정 파일)\n업데이트: AirHockey\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
     "auto": "files",
     "items": [
       {
         "kind": "모드",
         "action": "업데이트",
         "name": "AirHockey"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "[ETF] Entity Texture Features"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "[EMF] Entity Model Features"
+      },
+      {
+        "kind": "리소스팩",
+        "action": "추가",
+        "name": "Fresh Animations: Player Extension"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "Resource Pack Overrides"
+      },
+      {
+        "kind": "게임 설정 파일",
+        "action": "추가",
+        "name": "resourcepackoverrides.json"
       }
     ],
-    "updated": "07:28"
+    "updated": "14:30"
   },
   {
     "date": "2026-10-27",
