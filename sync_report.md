@@ -12,6 +12,7 @@
 - `entitytexturefeatures` [ETF] Entity Texture Features — 7.2.6-fabric-1.21.4
 - `resource-pack-overrides` Resource Pack Overrides — v21.4.0-1.21.4-Fabric
 - `hold-my-items` Hold My Items — 4.3
+- `commandkeys` Command Keys — 2.4.0+1.21.4
 - `modmenu` Mod Menu — 13.0.4
 - `cloth-config` Cloth Config API — 17.0.144+fabric
 - `placeholder-api` Text Placeholder API — 2.5.2+1.21.3

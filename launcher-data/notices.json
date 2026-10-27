@@ -1,21 +1,9 @@
 [
   {
     "date": "2026-10-27",
-    "title": "스킬을 원하는 키에 연결할 수 있어요",
-    "tag": "얼음 사냥터",
-    "body": "키바인드 모드(CommandKeys)가 들어갔어요. 스킬 명령어를 아무 키에나 연결할 수 있어요.\n\n설정하는 법\n1. 게임에서 ESC → 모드 → CommandKeys 를 눌러요.\n2. 새 키를 추가하고, 명령어 칸에 /skill1 을 적어요. (/skill2 ~ /skill4 도 같은 방법)\n3. 원하는 키를 눌러 저장해요.\n\n무기를 안 들고 있어도 자동으로 무기로 바꾼 뒤 스킬이 나가요.\n짧게 /s1 ~ /s4, 한글 /스킬1 ~ /스킬4 도 돼요."
-  },
-  {
-    "date": "2026-10-27",
-    "title": "얼음 사냥터 스킬을 숫자키로 쓸 수 있어요",
-    "tag": "얼음 사냥터",
-    "body": "핫바 1~4번 칸에 스킬 아이콘이 생겼어요. 숫자키 1~4를 누르면 스킬이 바로 나가요.\n무기는 5번 칸이고, 스킬을 쓰면 손이 자동으로 무기로 돌아와요.\n아이콘에 회색 덮개가 있으면 쿨타임이에요.\n\n예전 입력(F키, 우클릭, 쉬프트+우클릭, 쉬프트 2번)도 그대로 쓸 수 있어요.\n1~5번 칸은 직업 전용이라 다른 아이템은 6~9번 칸에 넣어 주세요."
-  },
-  {
-    "date": "2026-10-27",
     "title": "모드·리소스팩·게임 설정 파일 업데이트",
     "tag": "자동 업데이트",
-    "body": "추가: [ETF] Entity Texture Features, [EMF] Entity Model Features, Fresh Animations: Player Extension(리소스팩), Resource Pack Overrides, resourcepackoverrides.json(게임 설정 파일), Text Placeholder API, Cloth Config API, Mod Menu, Hold My Items\n업데이트: AirHockey\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
+    "body": "추가: [ETF] Entity Texture Features, [EMF] Entity Model Features, Fresh Animations: Player Extension(리소스팩), Resource Pack Overrides, resourcepackoverrides.json(게임 설정 파일), Text Placeholder API, Cloth Config API, Mod Menu, Hold My Items, Command Keys\n업데이트: AirHockey\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
     "auto": "files",
     "items": [
       {
@@ -67,9 +55,26 @@
         "kind": "모드",
         "action": "추가",
         "name": "Hold My Items"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "Command Keys"
       }
     ],
-    "updated": "14:49"
+    "updated": "15:35"
+  },
+  {
+    "date": "2026-10-27",
+    "title": "스킬을 원하는 키에 연결할 수 있어요",
+    "tag": "얼음 사냥터",
+    "body": "키바인드 모드(CommandKeys)가 들어갔어요. 스킬 명령어를 아무 키에나 연결할 수 있어요.\n\n설정하는 법\n1. 게임에서 ESC → 모드 → CommandKeys 를 눌러요.\n2. 새 키를 추가하고, 명령어 칸에 /skill1 을 적어요. (/skill2 ~ /skill4 도 같은 방법)\n3. 원하는 키를 눌러 저장해요.\n\n무기를 안 들고 있어도 자동으로 무기로 바꾼 뒤 스킬이 나가요.\n짧게 /s1 ~ /s4, 한글 /스킬1 ~ /스킬4 도 돼요."
+  },
+  {
+    "date": "2026-10-27",
+    "title": "얼음 사냥터 스킬을 숫자키로 쓸 수 있어요",
+    "tag": "얼음 사냥터",
+    "body": "핫바 1~4번 칸에 스킬 아이콘이 생겼어요. 숫자키 1~4를 누르면 스킬이 바로 나가요.\n무기는 5번 칸이고, 스킬을 쓰면 손이 자동으로 무기로 돌아와요.\n아이콘에 회색 덮개가 있으면 쿨타임이에요.\n\n예전 입력(F키, 우클릭, 쉬프트+우클릭, 쉬프트 2번)도 그대로 쓸 수 있어요.\n1~5번 칸은 직업 전용이라 다른 아이템은 6~9번 칸에 넣어 주세요."
   },
   {
     "date": "2026-10-27",

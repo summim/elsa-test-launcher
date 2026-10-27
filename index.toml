@@ -14,6 +14,11 @@ hash = "df15648dd4d4e27dd0c45ab4e78277c45886b77a698b129f4ce2d2bc337f7044"
 metafile = true
 
 [[files]]
+file = "mods/commandkeys.pw.toml"
+hash = "426faa85a6899c880c7261d383ea987877691b99b108e862fe117cfa88d0b268"
+metafile = true
+
+[[files]]
 file = "mods/custom-airhockey.pw.toml"
 hash = "8a65c8eac40fa19d8dacd93fa775fa78db102ed6aa165cafa154462ad8909453"
 metafile = true
