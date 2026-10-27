@@ -1,27 +1,9 @@
 [
   {
     "date": "2026-10-27",
-    "title": "1인칭 검 휘두르기 모션 추가",
-    "tag": "모션",
-    "body": "이제 1인칭에서 내 손이 보이고, 검을 크게 휘두르는 모션이 나와요.\n얼음 사냥터 평타 콤보를 칠 때 훨씬 손맛이 좋아져요.\n\nESC → 모드 메뉴에서 Hold My Items 설정을 바꿀 수 있어요."
-  },
-  {
-    "date": "2026-10-27",
-    "title": "얼음 사냥터 원거리 직업 2종 추가",
-    "tag": "얼음 사냥터",
-    "body": "레인저(활): 빠르고 사거리가 길어요. 머리를 맞히면 헤드샷 피해가 들어가요.\n화염술사(지팡이): 맞은 적이 불타고, 넓은 범위를 한 번에 공격해요.\n\n이제 사냥터에 들어가면 6개 직업 중 하나가 랜덤으로 뽑혀요.\n원거리 직업은 좌클릭으로 바라보는 방향에 쏴요. 화살이나 마나는 필요 없어요."
-  },
-  {
-    "date": "2026-10-27",
-    "title": "플레이어 걷기·달리기·공격 모션이 바뀌었어요",
-    "tag": "모션",
-    "body": "캐릭터가 걷고, 달리고, 검을 휘두르고, 점프할 때 움직임이 더 자연스러워져요.\n런처로 게임을 시작하면 자동으로 설치되고 켜져요. 따로 설정할 건 없어요.\n\n다른 사람의 모션은 그 사람도 숨밈 런처로 들어와야 똑같이 보여요."
-  },
-  {
-    "date": "2026-10-27",
     "title": "모드·리소스팩·게임 설정 파일 업데이트",
     "tag": "자동 업데이트",
-    "body": "추가: [ETF] Entity Texture Features, [EMF] Entity Model Features, Fresh Animations: Player Extension(리소스팩), Resource Pack Overrides, resourcepackoverrides.json(게임 설정 파일)\n업데이트: AirHockey\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
+    "body": "추가: [ETF] Entity Texture Features, [EMF] Entity Model Features, Fresh Animations: Player Extension(리소스팩), Resource Pack Overrides, resourcepackoverrides.json(게임 설정 파일), Text Placeholder API, Cloth Config API, Mod Menu, Hold My Items\n업데이트: AirHockey\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
     "auto": "files",
     "items": [
       {
@@ -53,9 +35,47 @@
         "kind": "게임 설정 파일",
         "action": "추가",
         "name": "resourcepackoverrides.json"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "Text Placeholder API"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "Cloth Config API"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "Mod Menu"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "Hold My Items"
       }
     ],
-    "updated": "14:30"
+    "updated": "14:49"
+  },
+  {
+    "date": "2026-10-27",
+    "title": "1인칭 검 휘두르기 모션 추가",
+    "tag": "모션",
+    "body": "이제 1인칭에서 내 손이 보이고, 검을 크게 휘두르는 모션이 나와요.\n얼음 사냥터 평타 콤보를 칠 때 훨씬 손맛이 좋아져요.\n\nESC → 모드 메뉴에서 Hold My Items 설정을 바꿀 수 있어요."
+  },
+  {
+    "date": "2026-10-27",
+    "title": "얼음 사냥터 원거리 직업 2종 추가",
+    "tag": "얼음 사냥터",
+    "body": "레인저(활): 빠르고 사거리가 길어요. 머리를 맞히면 헤드샷 피해가 들어가요.\n화염술사(지팡이): 맞은 적이 불타고, 넓은 범위를 한 번에 공격해요.\n\n이제 사냥터에 들어가면 6개 직업 중 하나가 랜덤으로 뽑혀요.\n원거리 직업은 좌클릭으로 바라보는 방향에 쏴요. 화살이나 마나는 필요 없어요."
+  },
+  {
+    "date": "2026-10-27",
+    "title": "플레이어 걷기·달리기·공격 모션이 바뀌었어요",
+    "tag": "모션",
+    "body": "캐릭터가 걷고, 달리고, 검을 휘두르고, 점프할 때 움직임이 더 자연스러워져요.\n런처로 게임을 시작하면 자동으로 설치되고 켜져요. 따로 설정할 건 없어요.\n\n다른 사람의 모션은 그 사람도 숨밈 런처로 들어와야 똑같이 보여요."
   },
   {
     "date": "2026-10-27",

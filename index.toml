@@ -9,6 +9,11 @@ file = "config/resourcepackoverrides.json"
 hash = "0d6729f251738ec3399587d2a4b1346384262b023903c576eb66c74a9da55372"
 
 [[files]]
+file = "mods/cloth-config.pw.toml"
+hash = "df15648dd4d4e27dd0c45ab4e78277c45886b77a698b129f4ce2d2bc337f7044"
+metafile = true
+
+[[files]]
 file = "mods/custom-airhockey.pw.toml"
 hash = "8a65c8eac40fa19d8dacd93fa775fa78db102ed6aa165cafa154462ad8909453"
 metafile = true
@@ -34,6 +39,11 @@ hash = "b2f2ef63febe17f277635827ca474e1aeae321e8a82bef78942116f95d00250a"
 metafile = true
 
 [[files]]
+file = "mods/hold-my-items.pw.toml"
+hash = "42da3fcdbc722728d026e0f2938fe13dd97b49cc91bab271468738ef2f48d1ed"
+metafile = true
+
+[[files]]
 file = "mods/iris.pw.toml"
 hash = "e03fc0b0c151c5c072ac399d27b5c4268a093c41be73f3b1578d050bb49211f3"
 metafile = true
@@ -41,6 +51,16 @@ metafile = true
 [[files]]
 file = "mods/korean-chat-patch.pw.toml"
 hash = "320528b2d7b6598c40311e49d821d5c787f0433201759075256bf7396192edd6"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
+hash = "d51f560508eb7bfa502a445472370134d78f8c8ddc2dd79f9a0dc303f35f810f"
+metafile = true
+
+[[files]]
+file = "mods/placeholder-api.pw.toml"
+hash = "6b2abdc14fca0b9b42b5678e7c65af8b93d5032f0e4b0d2fbd93295903489d50"
 metafile = true
 
 [[files]]
