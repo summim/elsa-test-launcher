@@ -1,0 +1,8 @@
+name = "DappuCasino (홀덤 · 홀짝 · 사다리)"
+filename = "DappuCasino-1.0.0-mc1.21.4.jar"
+side = "client"
+
+[download]
+url = "https://raw.githubusercontent.com/summim/elsa-test-launcher/main/custom-mods/DappuCasino-1.0.0-mc1.21.4.jar"
+hash-format = "sha512"
+hash = "8f4a0d6521e5ce6ee4fb2b0dcad6b8f2ba1e31e06caf41ff8b473a5d0984de61e9d115b043fc12308c92f55f21dcf2464abeca218a5cd26e47c4ad428466e6b2"

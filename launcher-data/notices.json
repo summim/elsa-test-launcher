@@ -3,12 +3,12 @@
     "date": "2026-10-29",
     "title": "모드·리소스팩 업데이트",
     "tag": "자동 업데이트",
-    "body": "추가: OddLadder (홀짝·사다리)\n업데이트: icehunt_models.zip(리소스팩), Holdem\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
+    "body": "추가: DappuCasino (홀덤 · 홀짝 · 사다리)\n업데이트: icehunt_models.zip(리소스팩)\n삭제: OddLadder (홀짝·사다리), Holdem\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
     "auto": "files",
     "items": [
       {
         "kind": "모드",
-        "action": "추가",
+        "action": "삭제",
         "name": "OddLadder (홀짝·사다리)"
       },
       {
@@ -18,11 +18,16 @@
       },
       {
         "kind": "모드",
-        "action": "업데이트",
+        "action": "삭제",
         "name": "Holdem"
+      },
+      {
+        "kind": "모드",
+        "action": "추가",
+        "name": "DappuCasino (홀덤 · 홀짝 · 사다리)"
       }
     ],
-    "updated": "07:23"
+    "updated": "08:35"
   },
   {
     "date": "2026-10-29",

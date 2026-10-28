@@ -17,8 +17,7 @@
 - `modmenu` Mod Menu — 13.0.4
 - `placeholder-api` Text Placeholder API — 2.5.2+1.21.3
 - `AirHockey-1.0.2-mc1.21.4.jar` AirHockey — 1.0.2 (직접 만든 모드)
-- `Holdem-1.1.6-mc1.21.4.jar` Holdem — 1.1.6 (직접 만든 모드)
-- `OddLadder-mod-1.1.0.jar` OddLadder (홀짝·사다리) — 1.1.0 (직접 만든 모드)
+- `DappuCasino-1.0.0-mc1.21.4.jar` DappuCasino (홀덤 · 홀짝 · 사다리) — 1.0.0 (직접 만든 모드)
 
 ## 📢 런처 공지
 - 모드·리소스팩 업데이트

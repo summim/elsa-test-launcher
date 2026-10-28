@@ -24,13 +24,8 @@ hash = "8a65c8eac40fa19d8dacd93fa775fa78db102ed6aa165cafa154462ad8909453"
 metafile = true
 
 [[files]]
-file = "mods/custom-holdem.pw.toml"
-hash = "f7f2363b629ad537ea1112e05d4697ade93ea7ea90550b26f9db88303033c023"
-metafile = true
-
-[[files]]
-file = "mods/custom-oddladder.pw.toml"
-hash = "68ed88b27c8ef010b1c3df2c0685e7bfe2c24fc74b5ecf31b771636746c5bfac"
+file = "mods/custom-casino.pw.toml"
+hash = "14711a7cb5aa7cef7049557921ef46f43ebd5a3925b01e1a65468d6c54eea1e2"
 metafile = true
 
 [[files]]
