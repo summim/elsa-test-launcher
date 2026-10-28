@@ -13,8 +13,8 @@
 - `resource-pack-overrides` Resource Pack Overrides — v21.4.0-1.21.4-Fabric
 - `hold-my-items` Hold My Items — 4.3
 - `commandkeys` Command Keys — 2.4.0+1.21.4
-- `cloth-config` Cloth Config API — 17.0.144+fabric
 - `modmenu` Mod Menu — 13.0.4
+- `cloth-config` Cloth Config API — 17.0.144+fabric
 - `placeholder-api` Text Placeholder API — 2.5.2+1.21.3
 - `AirHockey-1.0.2-mc1.21.4.jar` AirHockey — 1.0.2 (직접 만든 모드)
 - `Holdem-1.0.0-mc1.21.4.jar` Holdem — 1.0.0 (직접 만든 모드)
