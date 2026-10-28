@@ -1,18 +1,23 @@
 [
   {
     "date": "2026-10-29",
-    "title": "모드 추가: OddLadder (홀짝·사다리)",
+    "title": "모드·리소스팩 업데이트",
     "tag": "자동 업데이트",
-    "body": "추가: OddLadder (홀짝·사다리)\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
+    "body": "추가: OddLadder (홀짝·사다리)\n업데이트: icehunt_models.zip(리소스팩)\n\n게임을 껐다가 런처에서 다시 시작하면 자동으로 적용돼요.",
     "auto": "files",
     "items": [
       {
         "kind": "모드",
         "action": "추가",
         "name": "OddLadder (홀짝·사다리)"
+      },
+      {
+        "kind": "리소스팩",
+        "action": "업데이트",
+        "name": "icehunt_models.zip"
       }
     ],
-    "updated": "04:06"
+    "updated": "04:19"
   },
   {
     "date": "2026-10-29",
