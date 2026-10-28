@@ -1,0 +1,8 @@
+name = "OddLadder (홀짝·사다리)"
+filename = "OddLadder-mod-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://raw.githubusercontent.com/summim/elsa-test-launcher/main/custom-mods/OddLadder-mod-1.0.0.jar"
+hash-format = "sha512"
+hash = "b89d619d3a29ebf32c2ee350d37e31be4d5a85db5170db0ed167b691dd1207cc09c95ff9bbce935693dfa0be8e2fe4fd4cebacff1b2813b6d83db3f30df324a1"

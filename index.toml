@@ -29,6 +29,11 @@ hash = "cbfecac7a23b529cce599d08ab67605764fc58e57ac33d8c12056ccfc4686415"
 metafile = true
 
 [[files]]
+file = "mods/custom-oddladder.pw.toml"
+hash = "c0662b07eae2729806f86a98d220688fd133c4d4c2f8841fc7f09559367a86cc"
+metafile = true
+
+[[files]]
 file = "mods/entity-model-features.pw.toml"
 hash = "9105f6847c2231d388b9e2f86426aafe3969c5e5a4340763306e55eb6bf3d66c"
 metafile = true
