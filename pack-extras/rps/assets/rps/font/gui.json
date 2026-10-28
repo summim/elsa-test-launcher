@@ -5,25 +5,297 @@
       "advances": {
         "\uf808": -8,
         "\uf8f0": -249,
-        "\uf8d0": -48
+        "\uf8d0": -48,
+        "\uf8f1": -1,
+        "\uf8f2": -257
       }
     },
     {
       "type": "bitmap",
-      "file": "rps:font/gui_select.png",
+      "file": "rps:font/gui_select_00.png",
       "ascent": 47,
-      "height": 256,
+      "height": 64,
       "chars": [
-        "\ue000"
+        "\ue100"
       ]
     },
     {
       "type": "bitmap",
-      "file": "rps:font/gui_result.png",
+      "file": "rps:font/gui_select_01.png",
       "ascent": 47,
-      "height": 256,
+      "height": 64,
       "chars": [
-        "\ue001"
+        "\ue101"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_02.png",
+      "ascent": 47,
+      "height": 64,
+      "chars": [
+        "\ue102"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_03.png",
+      "ascent": 47,
+      "height": 64,
+      "chars": [
+        "\ue103"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_10.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue104"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_11.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue105"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_12.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue106"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_13.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue107"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_20.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue108"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_21.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue109"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_22.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue10a"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_23.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue10b"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_30.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue10c"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_31.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue10d"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_32.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue10e"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_select_33.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue10f"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_00.png",
+      "ascent": 47,
+      "height": 64,
+      "chars": [
+        "\ue110"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_01.png",
+      "ascent": 47,
+      "height": 64,
+      "chars": [
+        "\ue111"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_02.png",
+      "ascent": 47,
+      "height": 64,
+      "chars": [
+        "\ue112"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_03.png",
+      "ascent": 47,
+      "height": 64,
+      "chars": [
+        "\ue113"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_10.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue114"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_11.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue115"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_12.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue116"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_13.png",
+      "ascent": -17,
+      "height": 64,
+      "chars": [
+        "\ue117"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_20.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue118"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_21.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue119"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_22.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue11a"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_23.png",
+      "ascent": -81,
+      "height": 64,
+      "chars": [
+        "\ue11b"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_30.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue11c"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_31.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue11d"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_32.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue11e"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "rps:font/gui_result_33.png",
+      "ascent": -145,
+      "height": 64,
+      "chars": [
+        "\ue11f"
       ]
     }
   ]
