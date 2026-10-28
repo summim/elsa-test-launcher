@@ -30,7 +30,7 @@ metafile = true
 
 [[files]]
 file = "mods/custom-oddladder.pw.toml"
-hash = "0403e3f13cc0661dc96edf3d897a1f8e74fc67aaa7dbacb812cf0a25f5538fc9"
+hash = "68ed88b27c8ef010b1c3df2c0685e7bfe2c24fc74b5ecf31b771636746c5bfac"
 metafile = true
 
 [[files]]
