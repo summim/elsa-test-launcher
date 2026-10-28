@@ -25,7 +25,7 @@ metafile = true
 
 [[files]]
 file = "mods/custom-holdem.pw.toml"
-hash = "96492a7ee19b6527be07a624c89cbbaf0e9ee952182c913f6aad7eaad44e1298"
+hash = "f7f2363b629ad537ea1112e05d4697ade93ea7ea90550b26f9db88303033c023"
 metafile = true
 
 [[files]]
