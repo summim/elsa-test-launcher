@@ -1,8 +1,8 @@
 name = "Holdem"
-filename = "Holdem-1.1.2-mc1.21.4.jar"
+filename = "Holdem-1.1.3-mc1.21.4.jar"
 side = "client"
 
 [download]
-url = "https://raw.githubusercontent.com/summim/elsa-test-launcher/main/custom-mods/Holdem-1.1.2-mc1.21.4.jar"
+url = "https://raw.githubusercontent.com/summim/elsa-test-launcher/main/custom-mods/Holdem-1.1.3-mc1.21.4.jar"
 hash-format = "sha512"
-hash = "8952ef91a166276b64e5065a84ed0185c94ffa03294e854a5abc64a1bde55eebb590784d02ba6992d7b16512af62e6d759982ce0161edd36bfcadbb9baf8bf46"
+hash = "8a6d11464b451d851697ef68407c210cb5d28b5a92e1bd012870a73e3f4e1fb3b4728991416f763d9011802fbdd7a4dc395be14787d1b7e96835a6a285e37e46"
