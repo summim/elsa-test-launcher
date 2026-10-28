@@ -4,13 +4,14 @@
       "type": "space",
       "advances": {
         "\uf808": -8,
-        "\uf8f0": -249
+        "\uf8f0": -249,
+        "\uf8d0": -48
       }
     },
     {
       "type": "bitmap",
       "file": "rps:font/gui_select.png",
-      "ascent": 13,
+      "ascent": 47,
       "height": 256,
       "chars": [
         "\ue000"
@@ -19,7 +20,7 @@
     {
       "type": "bitmap",
       "file": "rps:font/gui_result.png",
-      "ascent": 13,
+      "ascent": 47,
       "height": 256,
       "chars": [
         "\ue001"
