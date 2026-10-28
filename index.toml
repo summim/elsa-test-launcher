@@ -25,7 +25,7 @@ metafile = true
 
 [[files]]
 file = "mods/custom-casino.pw.toml"
-hash = "14711a7cb5aa7cef7049557921ef46f43ebd5a3925b01e1a65468d6c54eea1e2"
+hash = "10dd7bf439bf3d389d6a82b3ef3b78c753ac86168057a432dbb388defd178547"
 metafile = true
 
 [[files]]
