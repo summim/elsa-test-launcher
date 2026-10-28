@@ -25,7 +25,7 @@ metafile = true
 
 [[files]]
 file = "mods/custom-holdem.pw.toml"
-hash = "cbfecac7a23b529cce599d08ab67605764fc58e57ac33d8c12056ccfc4686415"
+hash = "50812abca55c9fc90643a2089a2d8dc06906066fb8882d7ab37e7f64c6df6ff7"
 metafile = true
 
 [[files]]
@@ -90,4 +90,4 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/icehunt_models.zip"
-hash = "d5d5279b0a8fc7089a628c1989aa43dbea31573d251e59f32a0a74a7903cc8dd"
+hash = "5ecc9877912216cdb88e0f517e8196487c4ce897e710685a952ef1331e023315"
